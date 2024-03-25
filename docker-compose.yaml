@@ -16,3 +16,22 @@ services:
       - DB_USER=devuser
       - DB_PASSWORD=devpassword
       - DB_NAME=databasename
+    depends_on:
+      - db
+
+  db:
+    image: postgres:13-alpine
+    volumes:
+      - postgres-db-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=devuser
+      - POSTGRES_PASSWORD=devpassword
+      - POSTGRES_DB=databasename
+
+volumes:
+  postgres-db-data:
+
+
+
+
+
