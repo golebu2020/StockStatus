@@ -5,5 +5,6 @@ from .views import CustomUserListPermission
 # url for updating permissions
 urlpatterns = [
     path('<int:pk>/', CustomUserUpdatePermission.as_view(), name="updaet-user-permission" ),
-    path('', CustomUserListPermission.as_view(), name="list-user-permission" )
+    path('', CustomUserListPermission.as_view(), name="list-user-permission" ),
+    
 ]

@@ -7,4 +7,5 @@ urlpatterns = [
     path('api/', include('stock.urls'), name='stock-api'),
     path('api/user/', include('role.urls'), name = 'role-api'),
     path('dj-rest-auth/', include('dj_rest_auth.urls')),
+    path('dj-rest-auth/registration/', include('dj_rest_auth.registration.urls'))
 ]
