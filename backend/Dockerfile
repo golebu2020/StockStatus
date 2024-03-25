@@ -25,7 +25,6 @@ RUN python -m venv /py && \
         --no-create-home \
         golebu2023
 
-
 ENV PATH="/py/bin:$PATH"
 
 USER golebu2023
