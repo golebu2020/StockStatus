@@ -3,6 +3,8 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('manager/', admin.site.urls),
+    path('admin/', admin.site.urls),
     path('api/', include('stock.urls'), name='stock-api'),
+    path('api/user/', include('role.urls'), name = 'role-api'),
+    path('dj-rest-auth/', include('dj_rest_auth.urls')),
 ]
